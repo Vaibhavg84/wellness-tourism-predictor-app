@@ -38,7 +38,7 @@ jobs:
       - name: Model Training and Registration
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python tourism_project/.github/workflows/scripts/train_and_deploy_model.py
+        run: python .github/workflows/scripts/train_and_deploy_model.py
 
   deploy-streamlit-space:
     needs: model-training-and-registration
