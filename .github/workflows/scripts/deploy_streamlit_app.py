@@ -1,4 +1,3 @@
-%%writefile tourism_project/.github/workflows/scripts/deploy_streamlit_app.py
 import os
 from huggingface_hub import HfApi, create_repo, upload_file
 
