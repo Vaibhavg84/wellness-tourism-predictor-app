@@ -1,4 +1,3 @@
-%%writefile tourism_project/.github/workflows/scripts/train_and_deploy_model.py
 import os
 import pandas as pd
 import numpy as np
