@@ -4,7 +4,7 @@ import joblib
 import os
 from huggingface_hub import hf_hub_download
 
-# Set page config
+# Set page config test deployment
 st.set_page_config(page_title="Wellness Tourism Package Predictor", layout="wide")
 
 # Hugging Face Model Hub details
