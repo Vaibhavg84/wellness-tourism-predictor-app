@@ -11,7 +11,7 @@ api = HfApi()
 HF_USERNAME = "Vaibhav84"  # Replace with your Hugging Face username
 HF_SPACE_NAME = "wellness-tourism-predictor-app"
 
-DEPLOYMENT_DIR = "tourism_project/deployment"
+DEPLOYMENT_DIR = "deployment/"
 APP_FILE = os.path.join(DEPLOYMENT_DIR, "app.py")
 REQUIREMENTS_FILE = os.path.join(DEPLOYMENT_DIR, "requirements.txt")
 DOCKERFILE = os.path.join(DEPLOYMENT_DIR, "Dockerfile")
