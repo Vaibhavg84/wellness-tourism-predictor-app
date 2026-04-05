@@ -16,11 +16,11 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install Dependencies
-        run: pip install -r tourism_project/.github/workflows/scripts/workflow_requirements.txt
+        run: pip install -r .github/workflows/scripts/workflow_requirements.txt
       - name: Register and Split Data
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python tourism_project/.github/workflows/scripts/register_and_split_data.py
+        run: python .github/workflows/scripts/register_and_split_data.py
 
   model-training-and-registration:
     needs: data-preparation-and-registration
@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install Dependencies
-        run: pip install -r tourism_project/.github/workflows/scripts/workflow_requirements.txt
+        run: pip install -r .github/workflows/scripts/workflow_requirements.txt
       - name: Create MLflow Tracking Directory
         run: mkdir -p mlruns
       - name: Model Training and Registration
@@ -50,8 +50,8 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install Dependencies
-        run: pip install -r tourism_project/.github/workflows/scripts/workflow_requirements.txt
+        run: pip install -r .github/workflows/scripts/workflow_requirements.txt
       - name: Push files to Frontend Hugging Face Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python tourism_project/.github/workflows/scripts/deploy_streamlit_app.py
+        run: python .github/workflows/scripts/deploy_streamlit_app.py
